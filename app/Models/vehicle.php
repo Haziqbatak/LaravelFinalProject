@@ -11,8 +11,8 @@ class Vehicle extends Model
     protected $fillable = [
         'name',
         'color',
-        'tire_wheel',
-        'machine',
+        'image',
+        'name_latin',
         'price'
     ];
 }

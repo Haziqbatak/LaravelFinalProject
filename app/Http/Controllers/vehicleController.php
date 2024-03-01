@@ -52,8 +52,8 @@ class VehicleController extends Controller
         Vehicle::create([
             'name' => $request->name,
             'color' => $request->color ?? 'black',
-            'tire_wheel'=>$request->tire_wheel ?? 2,
-            'machine'=>$request->machine,
+            'image'=>$request->image,
+            'name_latin'=>$request->name_latin,
             'price'=>$request->price
         ]);
         return redirect()->route('vehicle.index');
@@ -95,12 +95,12 @@ class VehicleController extends Controller
     public function update(Request $request, $id)
     {
         //
-         //validate
-         $this->validate($request,[
+            //validate
+            $this->validate($request,[
             'name'=> 'required',
             'color',
-            'tire_wheel',
-            'machine',
+            'image',
+            'name_latin',
             'price' => 'required',
         ]);
         //get data by id
@@ -109,8 +109,8 @@ class VehicleController extends Controller
         $vehicle->update([
             'name'=> $request->name,
             'color' => $request->color,
-            'tire_wheel' => $request->tire_wheel,
-            'machine' => $request->machine,
+            'image' => $request->tire_wheel,
+            'name_latin' => $request->machine,
             'price' => $request->price
         ]);
 
